@@ -10,7 +10,7 @@ class MyModel:
     @classmethod
     def load_training_data(cls):
         #Update path according to machine
-        path = "C:\\Users\\Bri\\Documents\\Bri Stuff\\ECU\\2022 Spring\\Natural Language Processing\\cse447-project-main\\cse447-project-main\\example\\"
+        path = "training data location"
         file_name = os.listdir(path)[0]
         train_file = os.path.join(path, file_name)
         return train_file
@@ -100,8 +100,8 @@ if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
     parser.add_argument('mode', choices=('train', 'test'), help='what to run')
     parser.add_argument('--work_dir', help='where to save', default='work')
-    parser.add_argument('--test_data', help='path to test data', default='C:\\Users\\Bri\\Documents\\Bri Stuff\\ECU\\2022 Spring\\Natural Language Processing\\cse447-project-main\\cse447-project-main\\example\\input.txt')
-    parser.add_argument('--test_output', help='path to write test predictions', default='C:\\Users\\Bri\\Documents\\Bri Stuff\\ECU\\2022 Spring\\Natural Language Processing\\cse447-project-main\\cse447-project-main\\example\\pred.txt')
+    parser.add_argument('--test_data', help='path to test data', default='testing data location')
+    parser.add_argument('--test_output', help='path to write test predictions', default='prediction txt location')
     #Specify whether to 'train' or 'test' the Model
     args = parser.parse_args(['train'])
     
